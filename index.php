@@ -9,6 +9,14 @@
 class Login {
   private $email;
   private $senha;
+  private $nome;
+
+
+  public function __construct($email, $senha, $nome){
+   $this->nome = $nome;
+   $this->getEmail($email);
+   $this->getSenha($senha); 
+  }
 
   public function getEmail(){
     return $this->email;
@@ -35,9 +43,7 @@ class Login {
   }
   }
 
-$logar = new Login();
-$logar ->setEmail('wendell@wendell.com');
-$logar ->setSenha(12345);
+$logar = new Login('senha@senha.br', 1234, 'Wendell');
 $logar->Logar();
   
 
